@@ -1,0 +1,981 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 1,
+  "links": [],
+  "panels": [
+    {
+      "datasource": {
+        "uid": "berg4jjulw5c0e"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "yellow",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 4,
+        "x": 0,
+        "y": 0
+      },
+      "id": 2,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "value",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.0.0",
+      "targets": [
+        {
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT COUNT(*) AS total_active_offers\nFROM job_offers\nWHERE status = 'active';",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "title": "Nombre d'offres actives",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "grafana-postgresql-datasource",
+        "uid": "berg4jjulw5c0e"
+      },
+      "description": "Nombre total des entreprises avec des offres actives",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "semi-dark-purple",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 4,
+        "x": 4,
+        "y": 0
+      },
+      "id": 4,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.0.0",
+      "targets": [
+        {
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT COUNT(DISTINCT c.company_id) AS total_active_companies\nFROM companies c\nJOIN job_offers jo ON c.company_id = jo.company_id\nWHERE jo.status = 'active';",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "title": "Entreprises qui recrutent",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "grafana-postgresql-datasource",
+        "uid": "berg4jjulw5c0e"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "semi-dark-purple",
+            "mode": "shades"
+          },
+          "custom": {
+            "axisBorderShow": true,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisGridShow": true,
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 7,
+            "gradientMode": "hue",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "smooth",
+            "lineStyle": {
+              "fill": "solid"
+            },
+            "lineWidth": 2,
+            "pointSize": 8,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "never",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "fieldMinMax": false,
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 10,
+        "x": 8,
+        "y": 0
+      },
+      "id": 5,
+      "options": {
+        "legend": {
+          "calcs": [
+            "max",
+            "min",
+            "mean"
+          ],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "timezone": [
+          "browser"
+        ],
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "12.0.0",
+      "targets": [
+        {
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT \n  DATE(created_at) AS date,\n  COUNT(*) AS total_active_offers\nFROM job_offers\nWHERE status = 'active'\nGROUP BY DATE(created_at)\nORDER BY date ASC;\n",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "title": "Évolutions des offres actives dans le temps",
+      "transparent": true,
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "grafana-postgresql-datasource",
+        "uid": "berg4jjulw5c0e"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#10e3e3",
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            }
+          },
+          "fieldMinMax": false,
+          "mappings": [],
+          "noValue": "-"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 6,
+        "x": 18,
+        "y": 0
+      },
+      "id": 6,
+      "options": {
+        "displayLabels": [
+          "name",
+          "value"
+        ],
+        "legend": {
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true,
+          "values": [
+            "percent"
+          ]
+        },
+        "pieType": "pie",
+        "reduceOptions": {
+          "calcs": [
+            "mean"
+          ],
+          "fields": "",
+          "values": true
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "12.0.0",
+      "targets": [
+        {
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT \n  s.name AS source_name,\n  COUNT(*) AS offer_count\nFROM job_offers jo\nJOIN sources s ON jo.source_id = s.source_id\nwhere status = 'active'\nGROUP BY s.name\nORDER BY offer_count DESC;",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "title": "Proportion des offres par source",
+      "transparent": true,
+      "type": "piechart"
+    },
+    {
+      "datasource": {
+        "type": "grafana-postgresql-datasource",
+        "uid": "berg4jjulw5c0e"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "blue",
+            "mode": "thresholds"
+          },
+          "custom": {
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 18,
+        "w": 8,
+        "x": 0,
+        "y": 3
+      },
+      "id": 3,
+      "options": {
+        "basemap": {
+          "config": {},
+          "name": "Layer 0",
+          "type": "default"
+        },
+        "controls": {
+          "mouseWheelZoom": true,
+          "showAttribution": true,
+          "showDebug": false,
+          "showMeasure": false,
+          "showScale": false,
+          "showZoom": true
+        },
+        "layers": [
+          {
+            "config": {
+              "blur": 15,
+              "radius": 3,
+              "weight": {
+                "fixed": 1,
+                "max": 1,
+                "min": 0
+              }
+            },
+            "filterData": {
+              "id": "byRefId",
+              "options": "A"
+            },
+            "location": {
+              "mode": "auto"
+            },
+            "name": "Layer 1",
+            "opacity": 1,
+            "tooltip": false,
+            "type": "heatmap"
+          }
+        ],
+        "tooltip": {
+          "mode": "details"
+        },
+        "view": {
+          "allLayers": true,
+          "id": "coords",
+          "lat": 46.232192999999995,
+          "lon": 2.209666999999996,
+          "zoom": 6
+        }
+      },
+      "pluginVersion": "12.0.0",
+      "targets": [
+        {
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT \n  l.location AS location_name,\n  l.latitude,\n  l.longitude,\n  COUNT(*) AS total_offers\nFROM job_offers jo\nJOIN locations l ON jo.location_id = l.location_id\nGROUP BY l.location, l.latitude, l.longitude\nHAVING l.latitude IS NOT NULL AND l.longitude IS NOT NULL;",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "title": "Distribution des offres par localisation",
+      "transparent": true,
+      "type": "geomap"
+    },
+    {
+      "datasource": {
+        "type": "grafana-postgresql-datasource",
+        "uid": "berg4jjulw5c0e"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "semi-dark-orange",
+            "mode": "shades"
+          },
+          "custom": {
+            "axisBorderShow": true,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "hidden",
+            "fillOpacity": 42,
+            "gradientMode": "hue",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineWidth": 3,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "fieldMinMax": false,
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 5,
+        "x": 8,
+        "y": 6
+      },
+      "id": 7,
+      "options": {
+        "barRadius": 0.25,
+        "barWidth": 0.85,
+        "fullHighlight": true,
+        "groupWidth": 0.7,
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "orientation": "horizontal",
+        "showValue": "auto",
+        "stacking": "none",
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        },
+        "xTickLabelRotation": 0,
+        "xTickLabelSpacing": 0
+      },
+      "pluginVersion": "12.0.0",
+      "targets": [
+        {
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT \n  c.name AS company_name,\n  COUNT(*) AS offer_count\nFROM job_offers jo\nJOIN companies c ON jo.company_id = c.company_id\nWHERE \n  jo.status = 'active'\n  AND c.name IS NOT NULL\n  AND TRIM(c.name) <> ''\nGROUP BY c.name\nORDER BY offer_count DESC\nLIMIT 10;\n",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "title": "Top 10 des entreprises qui recrutent en France",
+      "transparent": true,
+      "type": "barchart"
+    },
+    {
+      "datasource": {
+        "type": "grafana-postgresql-datasource",
+        "uid": "berg4jjulw5c0e"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-YlBl"
+          },
+          "custom": {
+            "axisBorderShow": true,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "hidden",
+            "fillOpacity": 72,
+            "gradientMode": "hue",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineWidth": 3,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 5,
+        "x": 13,
+        "y": 6
+      },
+      "id": 10,
+      "options": {
+        "barRadius": 0.25,
+        "barWidth": 0.85,
+        "colorByField": "offer_count",
+        "fullHighlight": true,
+        "groupWidth": 0.7,
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "orientation": "horizontal",
+        "showValue": "auto",
+        "stacking": "none",
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        },
+        "xTickLabelRotation": 0,
+        "xTickLabelSpacing": 300
+      },
+      "pluginVersion": "12.0.0",
+      "targets": [
+        {
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT \n  c.name AS company_name,\n  COUNT(*) AS offer_count\nFROM job_offers jo\nJOIN companies c ON jo.company_id = c.company_id\nJOIN (\n    SELECT job_id, title FROM adzuna_offers\n    UNION ALL\n    SELECT job_id, title FROM france_travail_offers\n    UNION ALL\n    SELECT job_id, title FROM jsearch_offers\n) AS offers ON jo.job_id = offers.job_id\nWHERE \n  jo.status = 'active'\n  AND c.name IS NOT NULL\n  AND TRIM(c.name) <> ''\n  AND (\n    offers.title ILIKE '%dev%' OR\n    offers.title ILIKE '%base de données%' OR\n    offers.title ILIKE '%software%' OR\n    offers.title ILIKE '%data%' OR\n    offers.title ILIKE '%digital%' OR\n    offers.title ILIKE '%cyber%' OR\n    offers.title ILIKE '%cloud%' OR\n    offers.title ILIKE '%ingénieur%' OR\n    offers.title ILIKE '%engineer%' OR\n    offers.title ILIKE '%docker%' OR\n    offers.title ILIKE '%aws%' OR\n    offers.title ILIKE '%gcp%'\n  )\n  AND (\n    offers.title NOT ILIKE '%formation%'\n    AND offers.title NOT ILIKE '%certification%'\n    AND offers.title NOT ILIKE '%certifiante%'\n  )\nGROUP BY c.name\nORDER BY offer_count DESC\nLIMIT 10;\n",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "title": "Top 10 des entreprises recrutant dans la Tech",
+      "transparent": true,
+      "type": "barchart"
+    },
+    {
+      "datasource": {
+        "type": "grafana-postgresql-datasource",
+        "uid": "berg4jjulw5c0e"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#c3c3c3",
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            }
+          },
+          "mappings": []
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 12,
+        "w": 6,
+        "x": 18,
+        "y": 9
+      },
+      "id": 8,
+      "options": {
+        "displayLabels": [
+          "percent"
+        ],
+        "legend": {
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "pieType": "donut",
+        "reduceOptions": {
+          "calcs": [],
+          "fields": "/^offer_count$/",
+          "values": true
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "12.0.0",
+      "targets": [
+        {
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT \n  CASE\n    WHEN LOWER(l.location) LIKE 'paris%' \n      OR LOWER(l.location) LIKE 'nanterre%' \n      OR LOWER(l.location) LIKE 'courbevoie%'\n    THEN 'PARIS'\n    ELSE l.location\n  END AS location_name,\n  COUNT(*) AS offer_count\nFROM job_offers jo\nJOIN locations l ON jo.location_id = l.location_id\nWHERE \n  jo.status = 'active'\n  AND l.location IS NOT NULL\n  AND TRIM(l.location) <> ''\nGROUP BY location_name\nORDER BY offer_count DESC\nLIMIT 10;\n",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "title": "Proportion des 10 villes qui recrutent le plus",
+      "transparent": true,
+      "type": "piechart"
+    },
+    {
+      "datasource": {
+        "type": "grafana-postgresql-datasource",
+        "uid": "berg4jjulw5c0e"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#00d3c2",
+            "mode": "shades"
+          },
+          "custom": {
+            "axisBorderShow": true,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "hidden",
+            "fillOpacity": 100,
+            "gradientMode": "hue",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineWidth": 2,
+            "scaleDistribution": {
+              "log": 2,
+              "type": "log"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "dark-red",
+                "value": 10
+              },
+              {
+                "color": "semi-dark-red",
+                "value": 20
+              },
+              {
+                "color": "red",
+                "value": 30
+              },
+              {
+                "color": "light-red",
+                "value": 40
+              },
+              {
+                "color": "light-yellow",
+                "value": 50
+              },
+              {
+                "color": "light-green",
+                "value": 60
+              },
+              {
+                "color": "green",
+                "value": 70
+              },
+              {
+                "color": "semi-dark-green",
+                "value": 80
+              },
+              {
+                "color": "#6ED0E0",
+                "value": 90
+              },
+              {
+                "color": "blue",
+                "value": 100
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 10,
+        "x": 8,
+        "y": 15
+      },
+      "id": 9,
+      "options": {
+        "barRadius": 0.3,
+        "barWidth": 0.91,
+        "fullHighlight": true,
+        "groupWidth": 0.7,
+        "legend": {
+          "calcs": [
+            "sum"
+          ],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "orientation": "vertical",
+        "showValue": "auto",
+        "stacking": "none",
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        },
+        "xTickLabelRotation": 0,
+        "xTickLabelSpacing": 100
+      },
+      "pluginVersion": "12.0.0",
+      "targets": [
+        {
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT \n  title,\n  COUNT(*) AS offer_count\nFROM (\n  -- France Travail\n  SELECT france_travail_offers.title\n  FROM france_travail_offers\n  JOIN job_offers ON france_travail_offers.job_id = job_offers.job_id\n  WHERE \n    job_offers.status = 'active'\n    AND france_travail_offers.title IS NOT NULL\n    AND TRIM(france_travail_offers.title) <> ''\n    AND (\n      france_travail_offers.title ILIKE '%data%' OR\n      france_travail_offers.title ILIKE '%cyber%' OR\n      france_travail_offers.title ILIKE '%développeur%' OR\n      france_travail_offers.title ILIKE '%developpeur%' OR\n      france_travail_offers.title ILIKE '%cloud%' OR\n      france_travail_offers.title ILIKE '%ingénieur%' OR\n      france_travail_offers.title ILIKE '%ingenieur%' OR\n      france_travail_offers.title ILIKE '%software%' OR\n      france_travail_offers.title ILIKE '%numérique%' OR\n      france_travail_offers.title ILIKE '%digital%'\n    )\n\n  UNION ALL\n\n  -- Adzuna\n  SELECT adzuna_offers.title\n  FROM adzuna_offers\n  JOIN job_offers ON adzuna_offers.job_id = job_offers.job_id\n  WHERE \n    job_offers.status = 'active'\n    AND adzuna_offers.title IS NOT NULL\n    AND TRIM(adzuna_offers.title) <> ''\n    AND (\n      adzuna_offers.title ILIKE '%data%' OR\n      adzuna_offers.title ILIKE '%cyber%' OR\n      adzuna_offers.title ILIKE '%développeur%' OR\n      adzuna_offers.title ILIKE '%developpeur%' OR\n      adzuna_offers.title ILIKE '%cloud%' OR\n      adzuna_offers.title ILIKE '%ingénieur%' OR\n      adzuna_offers.title ILIKE '%ingenieur%' OR\n      adzuna_offers.title ILIKE '%software%' OR\n      adzuna_offers.title ILIKE '%numérique%' OR\n      adzuna_offers.title ILIKE '%digital%'\n    )\n\n  UNION ALL\n\n  -- JSearch\n  SELECT jsearch_offers.title\n  FROM jsearch_offers\n  JOIN job_offers ON jsearch_offers.job_id = job_offers.job_id\n  WHERE \n    job_offers.status = 'active'\n    AND jsearch_offers.title IS NOT NULL\n    AND TRIM(jsearch_offers.title) <> ''\n    AND (\n      jsearch_offers.title ILIKE '%data%' OR\n      jsearch_offers.title ILIKE '%cyber%' OR\n      jsearch_offers.title ILIKE '%développeur%' OR\n      jsearch_offers.title ILIKE '%developpeur%' OR\n      jsearch_offers.title ILIKE '%cloud%' OR\n      jsearch_offers.title ILIKE '%ingénieur%' OR\n      jsearch_offers.title ILIKE '%ingenieur%' OR\n      jsearch_offers.title ILIKE '%software%' OR \n      jsearch_offers.title ILIKE '%numérique%' OR \n      jsearch_offers.title ILIKE '%digital%' \n    )\n) AS combined_titles\nGROUP BY title\nORDER BY offer_count DESC\nLIMIT 15;",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "title": "Top 15 métiers de la tech",
+      "transparent": true,
+      "type": "barchart"
+    }
+  ],
+  "preload": false,
+  "schemaVersion": 41,
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-30d",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "browser",
+  "title": "Job Market Dashboard",
+  "uid": "da5b040c-67cb-461e-9a2a-fc6d56635da5",
+  "version": 43
+}

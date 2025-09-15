@@ -1,0 +1,346 @@
+[
+  {
+    "code": "10309",
+    "libelle": "Administrateur / Administratrice de site Web"
+  },
+  {
+    "code":"489123",
+    "libelle":"Ingénieur / Ingénieure Cybersécurité Datacenter"
+  },
+  {
+    "code":"489121",
+    "libelle":"Expert / Experte en sécurité informatique (SSI)"
+  },
+  {
+    "code":"38834",
+    "libelle":"Expert / Experte en cybersécurité"
+  },
+  {
+    "code":"38915",
+    "libelle":"Analyste en cybersécurité"
+  },
+  {
+    "code":"38835",
+    "libelle":"Consultant / Consultante SaaS - Software as a Service"
+  },
+  {
+    "code":"489120",
+    "libelle":"Expert / Experte en technologie de l'information et des communications (TIC)"
+  },
+  {
+    "code": "11128",
+    "libelle": "Architecte système d'information"
+  },
+  {
+    "code": "11129",
+    "libelle": "Architecte système informatique"
+  },
+  {
+    "code": "10944",
+    "libelle": "Analyste développeur / Analyste développeuse"
+  },
+  {
+    "code": "10960",
+    "libelle": "Analyste-programmeur / Analyste-programmeuse de micro-informatique"
+  },
+  {
+    "code": "10961",
+    "libelle": "Analyste-programmeur / Analyste-programmeuse d'étude informatique"
+  },
+  {
+    "code": "10962",
+    "libelle": "Analyste-programmeur / Analyste-programmeuse en informatique industrielle"
+  },
+  {
+    "code": "10963",
+    "libelle": "Analyste-programmeur / Analyste-programmeuse gestion informatique"
+  },
+  {
+    "code": "10964",
+    "libelle": "Analyste-programmeur / Analyste-programmeuse informatique"
+  },
+  {
+    "code": "12357",
+    "libelle": "Chef de service infrastructure/environnement"
+  },
+  {
+    "code": "12824",
+    "libelle": "Concepteur développeur / Conceptrice développeuse de système électronique"
+  },
+  {
+    "code": "12247",
+    "libelle": "Chef de projet infrastructure"
+  },
+  {
+    "code": "12258",
+    "libelle": "Chef de projet Web"
+  },
+  {
+    "code": "14147",
+    "libelle": "Développeur culturel / Développeuse culturelle"
+  },
+  {
+    "code": "14148",
+    "libelle": "Développeur / Développeuse d'application"
+  },
+  {
+    "code": "14150",
+    "libelle": "Développeur / Développeuse de photographies"
+  },
+  {
+    "code": "14151",
+    "libelle": "Développeur / Développeuse de positifs de films cinématographiques"
+  },
+  {
+    "code":"404251",
+    "libelle":"Software Designer"
+  },
+  {
+    "code": "14152",
+    "libelle": "Développeur / Développeuse économique"
+  },
+  {
+    "code": "14153",
+    "libelle": "Développeur / Développeuse informatique"
+  },
+  {
+    "code": "14155",
+    "libelle": "Développeur / Développeuse multimédia"
+  },
+  {
+    "code": "14156",
+    "libelle": "Développeur / Développeuse web"
+  },
+  {
+    "code": "14158",
+    "libelle": "Développeur-vendeur / Développeuse-vendeuse en photographies"
+  },
+  {
+    "code": "15564",
+    "libelle": "Infographiste web master"
+  },
+  {
+    "code": "18192",
+    "libelle": "Programmeur / Programmeuse informatique"
+  },
+  {
+    "code": "18193",
+    "libelle": "Programmeur / Programmeuse logiciel de base informatique"
+  },
+  {
+    "code": "18194",
+    "libelle": "Programmeur / Programmeuse réseaux de télécoms"
+  },
+  {
+    "code": "18187",
+    "libelle": "Programmeur / Programmeuse d'applications"
+  },
+  {
+    "code": "18191",
+    "libelle": "Programmeur industriel / Programmeuse industrielle"
+  },
+  {
+    "code": "488824",
+    "libelle": "Devops"
+  },
+  {
+    "code": "489091",
+    "libelle": "Database administrator"
+  },
+  {
+    "code": "38797",
+    "libelle": "Concepteur / Conceptrice de jeux web online"
+  },
+  {
+    "code": "38798",
+    "libelle": "Level designer - jeux web online"
+  },
+  {
+    "code": "38831",
+    "libelle": "Architecte cloud"
+  },
+  {
+    "code": "38832",
+    "libelle": "Responsable qualité web"
+  },
+  {
+    "code": "126559",
+    "libelle": "Chef de produit web mobile"
+  },
+  {
+    "code": "38661",
+    "libelle": "Développeur / Développeuse décisionnel - Business Intelligence"
+  },
+  {
+    "code": "404254",
+    "libelle": "Web-ergonome"
+  },
+  {
+    "code": "489255",
+    "libelle": "Développeur / Développeuse logiciel ou d'application"
+  },
+  {
+    "code": "38715",
+    "libelle": "Lead programmeur / Lead programmeuse - jeux vidéo"
+  },
+  {
+    "code": "38716",
+    "libelle": "Programmeur / Programmeuse - jeux vidéo"
+  },
+  {
+    "code": "38780",
+    "libelle": "Game designer - jeux web online"
+  },
+  {
+    "code": "38782",
+    "libelle": "Designer web mobile"
+  },
+  {
+    "code": "38790",
+    "libelle": "Chef de produit web"
+  },
+  {
+    "code": "38916",
+    "libelle": "Développeur / Développeuse de sécurité des systèmes d'information"
+  },
+  {
+    "code": "488822",
+    "libelle": "Ingénieur / Ingénieure DevOps"
+  },
+  {
+    "code": "404274",
+    "libelle": "Ingénieur / Ingénieure data scientist"
+  },
+  {
+    "code": "404276",
+    "libelle": "Architecte big data"
+  },
+  {
+    "code": "404277",
+    "libelle": "Big data engineer"
+  },
+  {
+    "code": "404278",
+    "libelle": "Data engineer"
+  },
+  {
+    "code": "404280",
+    "libelle": "Expert / Experte big data"
+  },
+  {
+    "code": "404281",
+    "libelle": "Expert / Experte technique big data"
+  },
+  {
+    "code": "404282",
+    "libelle": "Ingénieur / Ingénieure big data"
+  },
+  {
+    "code": "404285",
+    "libelle": "Ingénieur / Ingénieure en développement big data"
+  },
+  {
+    "code": "404287",
+    "libelle": "Responsable big data"
+  },
+  {
+    "code": "404288",
+    "libelle": "Développeur / Développeuse data"
+  },
+  {
+    "code": "15582",
+    "libelle": "Ingénieur analyste-programmeur / Ingénieure analyste-programmeuse"
+  },
+  {
+    "code": "200151",
+    "libelle": "Développeur / Développeuse back-end"
+  },
+  {
+    "code": "140953",
+    "libelle": "Développeur / Développeuse logiciel de réalité augmentée"
+  },
+  {
+    "code": "140962",
+    "libelle": "Responsable développement / Business Developer"
+  },
+  {
+    "code": "18038",
+    "libelle": "Préparateur programmeur / Préparatrice programmeuse en méthodes industrielles"
+  },
+  {
+    "code": "38833",
+    "libelle": "Ingénieur / Ingénieure sécurité web"
+  },
+  {
+    "code": "38971",
+    "libelle": "Data analyst"
+  },
+  {
+    "code": "38972",
+    "libelle": "Data scientist"
+  },
+  {
+    "code": "38976",
+    "libelle": "Développeur / Développeuse full-stack"
+  },
+  {
+    "code": "200150",
+    "libelle": "Développeur / Développeuse front-end"
+  },
+  {
+    "code": "140952",
+    "libelle": "Développeur / Développeuse de logiciel de simulation optique et réalité virtuelle (VR)"
+  },
+  {
+    "code": "12823",
+    "libelle": "Concepteur développeur / Conceptrice développeuse de produits d'assurances"
+  },
+  {
+    "code": "404499",
+    "libelle": "Docker"
+  },
+  {
+    "code": "20726",
+    "libelle": "Web designer"
+  },
+  {
+    "code": "20727",
+    "libelle": "Webmaster concepteur / Webmaster conceptrice de site web"
+  },
+  {
+    "code": "20728",
+    "libelle": "Webmaster développeur / Webmaster développeuse"
+  },
+  {
+    "code": "405222",
+    "libelle": "Data analyst de la performance"
+  },
+  {
+    "code": "38977",
+    "libelle": "Développeur / Développeuse Big Data"
+  },
+  {
+    "code": "10965",
+    "libelle": "Analyste-programmeur / Analyste-programmeuse scientifique informatique"
+  },
+  {
+    "code": "11070",
+    "libelle": "Animateur / Animatrice web"
+  },
+  {
+    "code": "14149",
+    "libelle": "Développeur / Développeuse de négatifs de films cinématographiques"
+  },
+  {
+    "code": "18185",
+    "libelle": "Programmateur / Programmatrice radio"
+  },
+  {
+    "code": "38717",
+    "libelle": "Développeur / Développeuse - jeux vidéo"
+  },
+  {
+    "code": "38745",
+    "libelle": "Développeur / Développeuse web mobile"
+  }
+]
